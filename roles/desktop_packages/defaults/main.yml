@@ -1,3 +1,6 @@
+desktop_packages_download_local_dir: "{{ playbook_dir }}/files"
+desktop_packages_download_windows_dir: "{{ ansible_env.USERPROFILE }}\\Documents\\Packages"
+
 desktop_packages_chocolatey_package_list:
   - GoogleChrome
   - Kindle
@@ -5,6 +8,12 @@ desktop_packages_chocolatey_package_list:
   - virtualbox
   - VirtualBox.ExtensionPack
   - adobereader
+
+desktop_packages_package_url_list:
+  - name: putty-64bit-0.72-installer.msi
+    url: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.72-installer.msi
+    cksum: 82b906d253b9d9816236336bce045fee954d939a34aa81a3c4cadd3a95345a3c
+    cksum_type: sha256
 
 # Local Variables:
 # indent-tabs-mode: nil
