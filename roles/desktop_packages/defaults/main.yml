@@ -9,6 +9,7 @@ desktop_packages_chocolatey_package_list:
   - VirtualBox.ExtensionPack
   - adobereader
   - SakuraEditor
+  - winmerge
   - mp3tag
 
 desktop_packages_package_url_list:
