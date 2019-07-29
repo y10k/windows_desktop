@@ -1,5 +1,10 @@
 desktop_packages_list:
   - GoogleChrome
+  - Kindle
+  - amazon-music
+  - virtualbox
+  - VirtualBox.ExtensionPack
+  - adobereader
 
 # Local Variables:
 # indent-tabs-mode: nil
