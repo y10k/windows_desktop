@@ -1,0 +1,12 @@
+- name: install check
+  win_stat:
+    path: C:\ProgramData\chocolatey\bin\chocolatey.exe
+  register: chocolatey_exe_info
+
+- name: setup chocolatey
+  script: NonAdmin.ps1
+  when : not(chocolatey_exe_info.stat.exists)
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:

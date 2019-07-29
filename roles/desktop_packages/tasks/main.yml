@@ -1,0 +1,10 @@
+- name: present desktop packages
+  win_chocolatey:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ desktop_packages_list }}"
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:

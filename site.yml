@@ -1,0 +1,8 @@
+- hosts: windows
+  roles:
+    - chocolatey_enable
+    - desktop_packages
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:
