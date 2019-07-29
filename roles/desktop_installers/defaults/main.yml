@@ -1,4 +1,5 @@
-desktop_installers_download_dir: "{{ ansible_env.USERPROFILE }}\\Documents\\Installers"
+desktop_installers_download_local_dir: "{{ playbook_dir }}/files"
+desktop_installers_download_windows_dir: "{{ ansible_env.USERPROFILE }}\\Documents\\Installers"
 
 desktop_installers_url_list:
   - name: teraterm-4.103.exe
