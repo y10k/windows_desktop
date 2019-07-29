@@ -2,6 +2,7 @@
   roles:
     - chocolatey_enable
     - desktop_packages
+    - desktop_installers
 
 # Local Variables:
 # indent-tabs-mode: nil
