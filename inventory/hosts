@@ -1,0 +1,8 @@
+[windows]
+localhost ansible_host=localhost
+
+[windows:vars]
+ansible_user=toki
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
