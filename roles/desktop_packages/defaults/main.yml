@@ -10,6 +10,7 @@ desktop_packages_chocolatey_package_list:
   - adobereader
   - SakuraEditor
   - winmerge
+  - vcxsrv
   - mp3tag
 
 desktop_packages_package_url_list:
