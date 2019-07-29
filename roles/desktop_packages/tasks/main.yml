@@ -1,9 +1,9 @@
-- name: present desktop packages
+- name: present chocolatey packages
   win_chocolatey:
     name: "{{ item }}"
     state: present
   with_items:
-    - "{{ desktop_packages_list }}"
+    - "{{ desktop_packages_chocolatey_package_list }}"
 
 # Local Variables:
 # indent-tabs-mode: nil

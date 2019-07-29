@@ -1,4 +1,4 @@
-desktop_packages_list:
+desktop_packages_chocolatey_package_list:
   - GoogleChrome
   - Kindle
   - amazon-music
