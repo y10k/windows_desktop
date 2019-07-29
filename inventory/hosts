@@ -1,5 +1,5 @@
 [windows]
-localhost ansible_host=localhost
+win_local ansible_host=localhost
 
 [windows:vars]
 ansible_user=toki
