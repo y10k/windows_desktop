@@ -3,7 +3,7 @@
     - wsl_setup
     - chocolatey_packages
     - windows_packages
-    - desktop_installers
+    - manual_installers
     - startup
 
 # Local Variables:
