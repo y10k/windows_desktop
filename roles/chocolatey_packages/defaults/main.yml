@@ -1,0 +1,15 @@
+chocolatey_packages_chocolatey_package_list:
+  - GoogleChrome
+  - Kindle
+  - amazon-music
+  - virtualbox
+  - VirtualBox.ExtensionPack
+  - adobereader
+  - SakuraEditor
+  - winmerge
+  - vcxsrv
+  - mp3tag
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:

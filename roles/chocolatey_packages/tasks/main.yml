@@ -1,11 +1,18 @@
-- name: install check
+- name: setup check
   win_stat:
     path: C:\ProgramData\chocolatey\bin\chocolatey.exe
-  register: chocolatey_exe_info
+  register: chocolatey_exe
 
 - name: setup chocolatey
   script: NonAdmin.ps1
-  when : not(chocolatey_exe_info.stat.exists)
+  when : not(chocolatey_exe.stat.exists)
+
+- name: packages
+  win_chocolatey:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ chocolatey_packages_chocolatey_package_list }}"
 
 # Local Variables:
 # indent-tabs-mode: nil
