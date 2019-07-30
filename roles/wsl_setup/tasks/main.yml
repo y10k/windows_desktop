@@ -14,9 +14,9 @@
     - name: WSL user directory
       set_fact:
         wsl_user_dir: "{{ wslpath.stdout }}"
-    - name: overwrite desktop_packages_download_local_dir
+    - name: overwrite windows_packages_download_local_dir
       set_fact:
-        desktop_packages_download_local_dir: "{{ wsl_user_dir }}/Documents/Packages"
+        windows_packages_download_local_dir: "{{ wsl_user_dir }}/Documents/Packages"
     - name: overwrite desktop_installers_download_local_dir
       set_fact:
         desktop_installers_download_local_dir: "{{ wsl_user_dir }}/Documents/Installers"

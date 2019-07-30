@@ -4,37 +4,37 @@
     path: "{{ item }}"
     state: directory
   with_items:
-    - "{{ desktop_packages_download_local_dir }}"
+    - "{{ windows_packages_download_local_dir }}"
 
 - name: get packages
   delegate_to: localhost
   get_url:
     url: "{{ item.url }}"
-    dest: "{{ desktop_packages_download_local_dir }}/{{ item.name }}"
+    dest: "{{ windows_packages_download_local_dir }}/{{ item.name }}"
     checksum: "{{ item.cksum_type }}:{{ item.cksum }}"
   with_items:
-    - "{{ desktop_packages_package_url_list }}"
+    - "{{ windows_packages_package_url_list }}"
 
 - name: windows directory
   win_file:
     path: "{{ item }}"
     state: directory
   with_items:
-    - "{{ desktop_packages_download_windows_dir }}"
+    - "{{ windows_packages_download_windows_dir }}"
 
 - name: copy to windows
   win_copy:
-    src: "{{ desktop_packages_download_local_dir }}/{{ item.name }}"
-    dest: "{{ desktop_packages_download_windows_dir }}\\{{ item.name }}"
+    src: "{{ windows_packages_download_local_dir }}/{{ item.name }}"
+    dest: "{{ windows_packages_download_windows_dir }}\\{{ item.name }}"
   with_items:
-    - "{{ desktop_packages_package_url_list }}"
+    - "{{ windows_packages_package_url_list }}"
 
 - name: present windows packages
   win_package:
-    path: "{{ desktop_packages_download_windows_dir }}\\{{ item.name }}"
+    path: "{{ windows_packages_download_windows_dir }}\\{{ item.name }}"
     state: present
   with_items:
-    - "{{ desktop_packages_package_url_list }}"
+    - "{{ windows_packages_package_url_list }}"
 
 # Local Variables:
 # indent-tabs-mode: nil
