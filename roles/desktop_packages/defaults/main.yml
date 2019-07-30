@@ -1,5 +1,5 @@
 desktop_packages_download_local_dir: "{{ playbook_dir }}/files"
-desktop_packages_download_windows_dir: "{{ ansible_env.USERPROFILE }}\\Documents\\Packages"
+desktop_packages_download_windows_dir: "{{ ansible_user_dir }}\\Documents\\Packages"
 
 desktop_packages_chocolatey_package_list:
   - GoogleChrome
