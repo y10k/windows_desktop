@@ -1,0 +1,26 @@
+- name: WSL directory exits?
+  delegate_to: localhost
+  stat:
+    path: /mnt/c/Windows
+  register: windir
+
+- name: WSL facts
+  when: windir.stat.exists and windir.stat.isdir
+  block:
+    - name: WSL path
+      delegate_to: localhost
+      command: "wslpath -u {{ ansible_user_dir | quote }}"
+      register: wslpath
+    - name: WSL user directory
+      set_fact:
+        wsl_user_dir: "{{ wslpath.stdout }}"
+    - name: overwrite desktop_packages_download_local_dir
+      set_fact:
+        desktop_packages_download_local_dir: "{{ wsl_user_dir }}/Documents/Packages"
+    - name: overwrite desktop_installers_download_local_dir
+      set_fact:
+        desktop_installers_download_local_dir: "{{ wsl_user_dir }}/Documents/Installers"
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:
