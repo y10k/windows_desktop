@@ -6,7 +6,7 @@
   with_items:
     - "{{ windows_packages_download_local_dir }}"
 
-- name: get packages
+- name: fetch
   delegate_to: localhost
   get_url:
     url: "{{ item.url }}"
@@ -29,7 +29,7 @@
   with_items:
     - "{{ windows_packages_package_url_list }}"
 
-- name: present windows packages
+- name: packages
   win_package:
     path: "{{ windows_packages_download_windows_dir }}\\{{ item.name }}"
     state: present
