@@ -3,6 +3,7 @@
     - chocolatey_enable
     - desktop_packages
     - desktop_installers
+    - startup
 
 # Local Variables:
 # indent-tabs-mode: nil

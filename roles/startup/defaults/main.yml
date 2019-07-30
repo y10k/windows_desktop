@@ -1,0 +1,22 @@
+startup_dir: "{{ ansible_user_dir }}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup"
+
+startup_shortcut_list:
+  - name: linux_home.vhd
+    src: C:\Users\toki\Documents\vhd\linux_home.vhdx
+    dir: C:\Users\toki\Documents\vhd
+    args:
+  - name: Pageant
+    src: C:\Program Files\PuTTY\pageant.exe
+    dir: C:\Program Files\PuTTY
+    args: C:\Users\toki\Documents\ssh\id_ed25519.ppk
+  - name: start-ssh-pageant.cmd
+    src: C:\Program Files\Git\cmd\start-ssh-pageant.cmd
+    dir: C:\Program Files\Git\cmd
+    args:
+
+startup_file_list:
+  - config.xlaunch
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:

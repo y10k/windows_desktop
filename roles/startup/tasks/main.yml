@@ -1,0 +1,21 @@
+- name: shortcuts
+  win_shortcut:
+    src: "{{ item.src }}"
+    dest: "{{ startup_dir }}\\{{ item.name }}.lnk"
+    directory: "{{ item.dir }}"
+    args: "{{ item.args }}"
+    state: present
+    windowstyle: minimized
+  with_items:
+    - "{{ startup_shortcut_list }}"
+
+- name: files
+  win_copy:
+    src: "{{ item }}"
+    dest: "{{ startup_dir }}\\{{ item }}"
+  with_items:
+    - "{{ startup_file_list }}"
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:
