@@ -2,7 +2,7 @@
   roles:
     - wsl_setup
     - chocolatey_packages
-    - desktop_packages
+    - windows_packages
     - desktop_installers
     - startup
 
