@@ -9,7 +9,7 @@ Windowsをセットアップする。
 Ansibleを実行するコントロールマシンで最新のubuntu_desktopプレイブック
 を適用していること。
 
-事前準備
+事前作業
 --------
 
 ### 1. 管理者権限でPowerShellを開始
@@ -82,3 +82,18 @@ win_local | SUCCESS => {
     "changed": false,
     "ping": "pong"
 ```
+
+事後作業
+--------
+
+### 1. VcXsrvの高DPI環境のスケーリング無効化
+
+`C:\Program Files\VcXsrv\xlaunch.exe`のプロパティを設定する。
+
+- xlaunch.exeのプロパティ
+    - 互換性
+        - 高DPIの設定
+            - 高DPIスケール設定の上書き
+                - 高いDPIスケールの動作を上書きします。: 有効
+                    - 拡大縮小の実行元
+                        - アプリケーション
