@@ -1,7 +1,7 @@
-desktop_installers_download_local_dir: "{{ playbook_dir }}/files"
-desktop_installers_download_windows_dir: "{{ ansible_user_dir }}\\Documents\\Installers"
+manual_installers_download_local_dir: "{{ playbook_dir }}/files"
+manual_installers_download_windows_dir: "{{ ansible_user_dir }}\\Documents\\Installers"
 
-desktop_installers_url_list:
+manual_installers_url_list:
   - name: teraterm-4.103.exe
     url: https://jaist.dl.osdn.jp/ttssh2/71232/teraterm-4.103.exe
     cksum: 344034ee31a8f0199a86b62d8b8b84c8f4c48a670ef4c295d7d1208a6adcd1e5

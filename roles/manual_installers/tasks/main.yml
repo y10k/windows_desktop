@@ -4,30 +4,30 @@
     path: "{{ item }}"
     state: directory
   with_items:
-    - "{{ desktop_installers_download_local_dir }}"
+    - "{{ manual_installers_download_local_dir }}"
 
 - name: get installers
   delegate_to: localhost
   get_url:
     url: "{{ item.url }}"
-    dest: "{{ desktop_installers_download_local_dir }}/{{ item.name }}"
+    dest: "{{ manual_installers_download_local_dir }}/{{ item.name }}"
     checksum: "{{ item.cksum_type }}:{{ item.cksum }}"
   with_items:
-    - "{{ desktop_installers_url_list }}"
+    - "{{ manual_installers_url_list }}"
 
 - name: windows directory
   win_file:
     path: "{{ item }}"
     state: directory
   with_items:
-    - "{{ desktop_installers_download_windows_dir }}"
+    - "{{ manual_installers_download_windows_dir }}"
 
 - name: copy to windows
   win_copy:
-    src: "{{ desktop_installers_download_local_dir }}/{{ item.name }}"
-    dest: "{{ desktop_installers_download_windows_dir }}\\{{ item.name }}"
+    src: "{{ manual_installers_download_local_dir }}/{{ item.name }}"
+    dest: "{{ manual_installers_download_windows_dir }}\\{{ item.name }}"
   with_items:
-    - "{{ desktop_installers_url_list }}"
+    - "{{ manual_installers_url_list }}"
 
 # Local Variables:
 # indent-tabs-mode: nil
