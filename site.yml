@@ -1,7 +1,7 @@
 - hosts: windows
   roles:
     - wsl_setup
-    - chocolatey_enable
+    - chocolatey_packages
     - desktop_packages
     - desktop_installers
     - startup
