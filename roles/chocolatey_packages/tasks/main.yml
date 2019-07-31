@@ -1,11 +1,8 @@
-- name: setup check
-  win_stat:
-    path: C:\ProgramData\chocolatey\bin\chocolatey.exe
-  register: chocolatey_exe
-
-- name: setup chocolatey
-  script: NonAdmin.ps1
-  when : not(chocolatey_exe.stat.exists)
+- name: package provider
+  win_command: "powershell Get-PackageProvider -Name {{ item }}"
+  with_items:
+    - NuGet
+    - Chocolatey
 
 - name: packages
   win_chocolatey:
