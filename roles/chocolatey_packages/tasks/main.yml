@@ -1,13 +1,21 @@
-- name: package provider
-  win_command: "powershell Get-PackageProvider -Name {{ item }}"
-  with_items:
-    - NuGet
-    - Chocolatey
+- name: setup check
+  win_stat:
+    path: C:\Chocolatey\lib
+  register: chocolatey_lib
 
-- name: chocolatey
-  win_command: "powershell Install-Package -Name {{ item }} -Force -ProviderName chocolatey"
-  with_items:
-    - chocolatey
+- name: setup
+  when: not(chocolatey_lib.stat.isdir)
+  block:
+    - name: package provider
+      win_command: "powershell Get-PackageProvider -Name {{ item }}"
+      with_items:
+        - NuGet
+        - Chocolatey
+
+    - name: chocolatey
+      win_command: "powershell Install-Package -Name {{ item }} -Force -ProviderName chocolatey"
+      with_items:
+        - chocolatey
 
 - name: packages
   win_chocolatey:
