@@ -12,6 +12,7 @@
     url: "{{ item.url }}"
     dest: "{{ manual_installers_download_local_dir }}/{{ item.name }}"
     checksum: "{{ item.cksum_type }}:{{ item.cksum }}"
+    backup: yes
   with_items:
     - "{{ manual_installers_url_list }}"
 
@@ -26,6 +27,7 @@
   win_copy:
     src: "{{ manual_installers_download_local_dir }}/{{ item.name }}"
     dest: "{{ manual_installers_download_windows_dir }}\\{{ item.name }}"
+    backup: yes
   with_items:
     - "{{ manual_installers_url_list }}"
 
