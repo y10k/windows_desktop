@@ -1,0 +1,18 @@
+- name: directory
+  win_file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ wallpapers_dir }}"
+
+- name: copy
+  win_copy:
+    src: "{{ item }}"
+    dest: "{{ wallpapers_dir }}/{{ item }}"
+  with_items:
+    - MTB.JPG
+    - SETO_INLAND_SEA.JPG
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:
