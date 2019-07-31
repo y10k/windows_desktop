@@ -18,6 +18,10 @@ manual_installers_url_list:
     url: https://s3.amazonaws.com/kindlepreviewer3/KindlePreviewerInstaller.exe
     cksum: 6a6c332786fd451ee2378d21ad83ba2706f631eff8d7523da2bfa95634f49289 # version 3.31.0
     cksum_type: sha256
+  - name: SharePointDesigner.exe # for Microsoft Office Picture Manager
+    url: https://download.microsoft.com/download/2/F/F/2FFEE065-A7CF-4B5D-A56D-A7188B9E0183/SharePointDesigner.exe
+    cksum: abe612ada67badce09b0df30355fbb9b26b60c475d4447b9c01372b9794ec992 # version 14.0.4730.1010
+    cksum_type: sha256
 
 # Local Variables:
 # indent-tabs-mode: nil
