@@ -3,6 +3,7 @@
     - role: wsl_setup
     - role: chocolatey_packages
     - role: windows_packages
+    - role: transpwnds
     - role: manual_installers
     - role: startup
     - role: wallpapers

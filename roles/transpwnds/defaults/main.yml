@@ -1,0 +1,13 @@
+transpwnds_download_local_dir: "{{ playbook_dir }}/files"
+transpwnds_unzip_dir: "{{ ansible_user_dir }}\\Documents\\TranspWnds"
+
+transpwnds_download_zip_list:
+  - name: TranspWnds.1.4.1.exe.zip
+    url: https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/transpwnds/TranspWnds.1.4.1.exe.zip
+    cksum: 3584b66a8a010762ef6d0a97ea9793ca04bc28a50084e09c2a8386b420038040
+    cksum_type: sha256
+    creates: TranspWndsHKH.dll
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:

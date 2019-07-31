@@ -17,6 +17,9 @@
     - name: overwrite windows_packages_download_local_dir
       set_fact:
         windows_packages_download_local_dir: "{{ wsl_user_dir }}/Documents/Packages"
+    - name: overwrite transpwnds_download_local_dir
+      set_fact:
+        transpwnds_download_local_dir: "{{ wsl_user_dir }}/Documents/TranspWnds"
     - name: overwrite manual_installers_download_local_dir
       set_fact:
         manual_installers_download_local_dir: "{{ wsl_user_dir }}/Documents/Installers"

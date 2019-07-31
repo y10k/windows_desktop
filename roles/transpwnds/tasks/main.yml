@@ -1,0 +1,42 @@
+- name: local directory
+  delegate_to: localhost
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ transpwnds_download_local_dir }}"
+
+- name: fetch
+  delegate_to: localhost
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ transpwnds_download_local_dir }}/{{ item.name }}"
+    checksum: "{{ item.cksum_type }}:{{ item.cksum }}"
+  with_items:
+    - "{{ transpwnds_download_zip_list }}"
+
+- name: windows directory
+  win_file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ transpwnds_unzip_dir }}"
+
+- name: copy to windows
+  win_copy:
+    src: "{{ transpwnds_download_local_dir }}/{{ item.name }}"
+    dest: "{{ transpwnds_unzip_dir }}\\{{ item.name }}"
+  with_items:
+    - "{{ transpwnds_download_zip_list }}"
+
+- name: unzip
+  win_unzip:
+    src: "{{ transpwnds_unzip_dir }}\\{{ item.name }}"
+    dest: "{{ transpwnds_unzip_dir }}"
+    creates: "{{ transpwnds_unzip_dir }}\\{{ item.creates }}"
+  with_items:
+    - "{{ transpwnds_download_zip_list }}"
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:
