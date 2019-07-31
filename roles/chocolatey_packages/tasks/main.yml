@@ -4,6 +4,11 @@
     - NuGet
     - Chocolatey
 
+- name: chocolatey
+  win_command: "powershell Install-Package -Name {{ item }} -Force -ProviderName chocolatey"
+  with_items:
+    - chocolatey
+
 - name: packages
   win_chocolatey:
     name: "{{ item }}"
