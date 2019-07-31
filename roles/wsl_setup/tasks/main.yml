@@ -1,4 +1,4 @@
-- name: WSL directory exits?
+- name: WSL directory exists?
   delegate_to: localhost
   stat:
     path: /mnt/c/Windows
