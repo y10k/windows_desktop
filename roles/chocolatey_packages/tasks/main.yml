@@ -19,10 +19,17 @@
 
 - name: packages
   win_chocolatey:
-    name: "{{ item }}"
+    name: "{{ item.name }}"
+    params: "{{ item.params | default() }}"
+    timeout: "{{ item.timeout | default(2700) }}"
     state: present
   with_items:
     - "{{ chocolatey_packages_chocolatey_package_list }}"
+
+- name: install packages
+  win_command: "powershell Install-Package -Name {{ item }}  -ProviderName chocolatey"
+  with_items:
+    - "{{ chocolatey_packages_install_package_list }}"
 
 # Local Variables:
 # indent-tabs-mode: nil
