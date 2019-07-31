@@ -27,7 +27,7 @@
     - "{{ chocolatey_packages_chocolatey_package_list }}"
 
 - name: install packages
-  win_command: "powershell Install-Package -Name {{ item }}  -ProviderName chocolatey"
+  win_command: "powershell Install-Package -Name {{ item }} -ProviderName chocolatey"
   with_items:
     - "{{ chocolatey_packages_install_package_list }}"
 
