@@ -1,11 +1,11 @@
 - hosts: windows
   roles:
-    - wsl_setup
-    - chocolatey_packages
-    - windows_packages
-    - manual_installers
-    - startup
-    - wallpapers
+    - role: wsl_setup
+    - role: chocolatey_packages
+    - role: windows_packages
+    - role: manual_installers
+    - role: startup
+    - role: wallpapers
 
 # Local Variables:
 # indent-tabs-mode: nil
