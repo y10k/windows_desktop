@@ -2,6 +2,7 @@ windows_desktop
 ===============
 
 Windowsをセットアップする。
+自分で使うための個人用設定。
 
 前提条件
 --------
@@ -81,6 +82,26 @@ SSH password:
 win_local | SUCCESS => {
     "changed": false,
     "ping": "pong"
+}
+```
+
+構築作業
+--------
+
+### 1. プレイブックの実行
+
+```sh
+$ rake run
+```
+
+### 2. 手動インストールの実施
+
+`Documents\Installers`フォルダーの各種インストーラを実行する。
+
+### 3. 仕上げのプレイブックの実行
+
+```sh
+$ rake fin
 ```
 
 事後作業
