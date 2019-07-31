@@ -1,0 +1,32 @@
+teraterm_settings_file_path: C:\Program Files (x86)\teraterm\TERATERM.INI
+
+teraterm_settings_item_list:
+  - { section: "Tera Term", option: AlphaBlend,       value: 180 }
+  - { section: "Tera Term", option: AlphaBlendActive, value: 220 }
+  - { section: "Tera Term", option: TerminalSize,     value: "150,48" }
+  - { section: "Tera Term", option: VTFont,           value: "ＭＳ ゴシック,0,-17,128" }
+  - { section: "Tera Term", option: MetaKey,          value: on }
+  - { section: "Tera Term", option: DisableAppCursor, value: on }
+
+  - { section: TTSSH, option: DefaultAuthMethod,   value: 16 }
+  - { section: TTSSH, option: ForwardAgent,        value: 1 }
+  - { section: TTSSH, option: ForwardAgentConfirm, value: 0 }
+  - { section: TTSSH, option: ForwardAgentNotify,  value: 0 }
+
+  - { section: Hosts, option: Host1,  value: localhost }
+  - { section: Hosts, option: Host2,  value: 192.168.100.200 }
+  - { section: Hosts, option: Host3,  value: 192.168.0.200 }
+  - { section: Hosts, option: Host4,  value: myhost.example.com }
+  - { section: Hosts, option: Host5,  value: 192.0.2.1 }
+  - { section: Hosts, option: Host6,  value: "[2001:db8:1:2:8401:2ff:fe03:405]" }
+  - { section: Hosts, option: Host7,  value: "[fe80::8401:2ff:fe03:405%3]" }
+  - { section: Hosts, option: Host8,  value: "myhost.example.com /F=myhost.ini" }
+  - { section: Hosts, option: Host9,  value: "user@myhost.example.com:10022 /ssh" }
+  - { section: Hosts, option: Host10, value: "ssh://user@myhost.example.com" }
+  - { section: Hosts, option: Host11, value: "/C=1 ;serial port" }
+  - { section: Hosts, option: Host12, value: '\\.\pipe\vmware-serial-port ;Named pipe' }
+  - { section: Hosts, option: Host13, value: "/R=readme.txt ;replay a file" }
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:

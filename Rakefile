@@ -17,6 +17,11 @@ task :run do
   sh "ansible-playbook -k -i inventory/hosts site.yml"
 end
 
+desc 'run final playbook'
+task :fin do
+  sh "ansible-playbook -k -i inventory/hosts final.yml"
+end
+
 desc 'converto README markdown to html'
 task :readme => [ 'README.html' ]
 

@@ -1,0 +1,14 @@
+- name: TERATERM.INI
+  win_lineinfile:
+    path: "{{ teraterm_settings_file_path }}"
+    insertafter: "\\[{{ item.section }}\\]"
+    regexp: "^{{ item.option }}="
+    line: "{{ item.option }}={{ item.value }}"
+    encoding: shift_jis
+    backup: yes
+  with_items:
+    - "{{ teraterm_settings_item_list }}"
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:

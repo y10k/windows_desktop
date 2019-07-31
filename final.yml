@@ -1,0 +1,7 @@
+- hosts: windows
+  roles:
+    - role: teraterm_settings
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:
