@@ -22,12 +22,19 @@
   with_items:
     - "{{ manual_installers_download_windows_dir }}"
 
-- name: copy to windows
+- name: copy downloaded files to windows
   win_copy:
     src: "{{ manual_installers_download_local_dir }}/{{ item.name }}"
     dest: "{{ manual_installers_download_windows_dir }}\\{{ item.name }}"
   with_items:
     - "{{ manual_installers_url_list }}"
+
+- name: copy local files to windows
+  win_copy:
+    src: "{{ item }}"
+    dest: "{{ manual_installers_download_windows_dir }}\\{{ item }}"
+  with_items:
+    - scd56jp.exe
 
 # Local Variables:
 # indent-tabs-mode: nil
