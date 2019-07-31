@@ -6,7 +6,7 @@
   with_items:
     - "{{ manual_installers_download_local_dir }}"
 
-- name: get installers
+- name: fetch
   delegate_to: localhost
   get_url:
     url: "{{ item.url }}"
