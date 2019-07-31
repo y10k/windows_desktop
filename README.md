@@ -16,8 +16,7 @@ Windowsをセットアップする。
 
 ### 1. 管理者権限でPowerShellを開始
 
-管理対象のリモートのMS-Windowsマシンで、管理者権限でWindows PowerShell
-を開始する。
+管理対象のMS-Windowsマシンで、管理者権限でWindows PowerShellを開始する。
 
 ```powershell
 Windows PowerShell
@@ -30,7 +29,7 @@ PS C:\WINDOWS\system32>
 
 ### 2. PowerShellスクリプトの実行の有効化
 
-管理対象のリモートのMS-Windowsマシンで次のPowerShellコマンドを実行する。
+管理対象のMS-Windowsマシンで次のPowerShellコマンドを実行する。
 
 ```powershell
 PS C:\WINDOWS\system32> Get-ExecutionPolicy
@@ -50,7 +49,7 @@ PS C:\WINDOWS\system32>
 
 ### 3. WinRMの有効化
 
-管理対象のリモートのMS-Windowsマシンで次のPowerShellコマンドを実行する。
+管理対象のMS-Windowsマシンで次のPowerShellコマンドを実行する。
 
 ```powershell
 PS C:\Users\toki\Documents\tmp> Invoke-WebRequest -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile ConfigureRemotingForAnsible.ps1
@@ -91,15 +90,20 @@ win_local | SUCCESS => {
 
 ### 1. プレイブックの実行
 
+Ansibleを実行するコントロールマシンで次のコマンドを実行する。
+
 ```sh
 $ rake run
 ```
 
 ### 2. 手動インストールの実施
 
-`Documents\Installers`フォルダーの各種インストーラを実行する。
+管理対象のMS-Windowsマシンで`Documents\Installers`フォルダー
+の各種インストーラを実行する。
 
 ### 3. 仕上げのプレイブックの実行
+
+Ansibleを実行するコントロールマシンで次のコマンドを実行する。
 
 ```sh
 $ rake fin
@@ -109,6 +113,8 @@ $ rake fin
 --------
 
 ### 1. 高DPI環境のスケーリング無効化
+
+管理対象のMS-Windowsマシンで次の設定を実施する。
 
 #### 設定対象ファイル
 
@@ -126,7 +132,8 @@ $ rake fin
 
 ### 2. TranspWndsの設定
 
-`Documents\TranspWnds\TranspWnds.exe`を起動し、次の設定を実施する。
+管理対象のMS-Windowsマシンで`Documents\TranspWnds\TranspWnds.exe`を起
+動し、次の設定を実施する。
 
 - 通知領域
     - TrasnpWnds
@@ -138,5 +145,5 @@ $ rake fin
 
 ### 3. 壁紙の設定
 
-`Documents\Wallpapers`の画像から好みの壁紙を設定する。
-壁紙の自動設定は難しかった。
+管理対象のMS-Windowsマシンで`Documents\Wallpapers`の画像から好みの壁紙
+を設定する。壁紙の自動設定は難しかった。
