@@ -123,7 +123,19 @@ $ rake fin
                 - 拡大縮小の実行元
                     - アプリケーション : 選択する
 
-### 2. 壁紙の設定
+### 2. TranspWndsの設定
+
+`Documents\TranspWnds\TranspWnds.exe`を起動し、次の設定を実施する。
+
+- 通知領域
+    - TrasnpWnds
+        - 右クリック
+            - Options
+                - System
+                    - AutoRun
+                        - Run on Windows startup : 有効にする
+
+### 3. 壁紙の設定
 
 `Documents\Wallpapers`の画像から好みの壁紙を設定する。
 壁紙の自動設定は難しかった。
