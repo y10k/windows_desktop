@@ -1,7 +1,7 @@
 - name: TERATERM.INI
   win_lineinfile:
     path: "{{ teraterm_settings_file_path }}"
-    insertafter: "\\[{{ item.section }}\\]"
+    insertafter: "^\\[{{ item.section }}\\]$"
     regexp: "^{{ item.option }}="
     line: "{{ item.option }}={{ item.value }}"
     encoding: shift_jis
