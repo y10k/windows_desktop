@@ -4,22 +4,22 @@ require 'rake/clean'
 
 desc 'windows ping'
 task :ping do
-  sh "ansible -k -i inventory/hosts windows -m win_ping"
+  sh "ansible -ki inventory/hosts windows -m win_ping"
 end
 
 desc 'windows facts'
 task :facts do
-  sh "ansible -k -i inventory/hosts windows -m setup"
+  sh "ansible -ki inventory/hosts windows -m setup"
 end
 
 desc 'run playbook'
 task :run do
-  sh "ansible-playbook -k -i inventory/hosts site.yml"
+  sh "ansible-playbook -ki inventory/hosts site.yml"
 end
 
 desc 'run final playbook'
 task :fin do
-  sh "ansible-playbook -k -i inventory/hosts final.yml"
+  sh "ansible-playbook -ki inventory/hosts final.yml"
 end
 
 desc 'converto README markdown to html'
