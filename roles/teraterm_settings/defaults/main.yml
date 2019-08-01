@@ -5,8 +5,8 @@ teraterm_settings_item_list:
   - { section: "Tera Term", option: AlphaBlendActive, value: 220 }
   - { section: "Tera Term", option: TerminalSize,     value: "150,48" }
   - { section: "Tera Term", option: VTFont,           value: "ＭＳ ゴシック,0,-17,128" }
-  - { section: "Tera Term", option: MetaKey,          value: on }
-  - { section: "Tera Term", option: DisableAppCursor, value: on }
+  - { section: "Tera Term", option: MetaKey,          value: "on" }
+  - { section: "Tera Term", option: DisableAppCursor, value: "on" }
 
   - { section: TTSSH, option: DefaultAuthMethod,   value: 16 }
   - { section: TTSSH, option: ForwardAgent,        value: 1 }
