@@ -22,6 +22,10 @@ manual_installers_url_list:
     url: https://download.microsoft.com/download/2/F/F/2FFEE065-A7CF-4B5D-A56D-A7188B9E0183/SharePointDesigner.exe
     cksum: abe612ada67badce09b0df30355fbb9b26b60c475d4447b9c01372b9794ec992 # version 14.0.4730.1010
     cksum_type: sha256
+  - name: wlsetup-all.exe       # for Microsoft Windows Movie Maker
+    url: https://web.archive.org/web/20170120121608if_/http://wl.dlservice.microsoft.com/download/F/A/D/FAD48A38-8F81-4DA1-8302-EFAB6FEC4A92/ja/wlsetup-all.exe
+    cksum: b612214f294bd9124221ea818ed90c3ab0e59d251c2d077793a675f4cd123fdd
+    cksum_type: sha256
 
 # Local Variables:
 # indent-tabs-mode: nil
