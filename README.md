@@ -148,7 +148,7 @@ win_local                  : ok=2    changed=0    unreachable=0    failed=0
 #### プロパティの設定
 
 - 互換性
-    - 高DPIの設定
+    - 高DPI設定の変更
         - 高DPIスケール設定の上書き
             - 高いDPIスケールの動作を上書きします。: 有効にする
                 - 拡大縮小の実行元
