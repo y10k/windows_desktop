@@ -1,5 +1,5 @@
-teraterm_setting_program_files_dir: C:\Program Files (x86)\teraterm
-teraterm_setting_virtual_store_dir: C:\Users\toki\AppData\Local\VirtualStore\Program Files (x86)\teraterm
+teraterm_settings_program_files_dir: C:\Program Files (x86)\teraterm
+teraterm_settings_virtual_store_dir: C:\Users\toki\AppData\Local\VirtualStore\Program Files (x86)\teraterm
 
 teraterm_settings_item_list:
   - { section: "Tera Term", option: AlphaBlend,       value: 180 }
