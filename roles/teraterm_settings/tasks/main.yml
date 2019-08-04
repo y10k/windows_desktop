@@ -1,14 +1,18 @@
 - name: virtual store directory
   win_file:
     state: directory
-    path: "{{ teraterm_settings_virtual_store_dir }}"
+    path: "{{ item }}"
+  with_items:
+    - "{{ teraterm_settings_virtual_store_dir }}"
 
 - name: initial setting file
   win_copy:
-    src: "{{ teraterm_settings_program_files_dir }}\\TERATERM.INI"
-    dest: "{{ teraterm_settings_virtual_store_dir }}\\TERATERM.INI"
+    src: "{{ teraterm_settings_program_files_dir }}\\{{ item }}"
+    dest: "{{ teraterm_settings_virtual_store_dir }}\\{{ item }}"
     force: no
     remote_src: yes
+  with_items:
+    - TERATERM.INI
 
 - name: TERATERM.INI
   win_lineinfile:
