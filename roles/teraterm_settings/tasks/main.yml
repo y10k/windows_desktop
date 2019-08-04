@@ -1,6 +1,18 @@
+- name: virtual store directory
+  win_file:
+    state: directory
+    path: "{{ teraterm_setting_virtual_store_dir }}"
+
+- name: initial setting file
+  win_copy:
+    src: "{{ teraterm_setting_program_files_dir }}\\TERATERM.INI"
+    dest: "{{ teraterm_setting_virtual_store_dir }}\\TERATERM.INI"
+    force: no
+    remote_src: yes
+
 - name: TERATERM.INI
   win_lineinfile:
-    path: "{{ teraterm_settings_file_path }}"
+    path: "{{ teraterm_setting_virtual_store_dir }}\\TERATERM.INI"
     insertafter: "^\\[{{ item.section | regex_escape }}\\]$"
     regexp: "^{{ item.option | regex_escape }}="
     line: "{{ item.option }}={{ item.value }}"
