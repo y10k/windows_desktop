@@ -9,6 +9,7 @@ teraterm_settings_item_list:
   - { section: "Tera Term", option: MetaKey,          value: "on" }
   - { section: "Tera Term", option: DisableAppCursor, value: "on" }
 
+  - { section: TTSSH, option: DefaultForwarding,   value: X }
   - { section: TTSSH, option: DefaultAuthMethod,   value: 16 }
   - { section: TTSSH, option: ForwardAgent,        value: 1 }
   - { section: TTSSH, option: ForwardAgentConfirm, value: 0 }
