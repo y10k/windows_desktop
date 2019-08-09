@@ -1,0 +1,19 @@
+folder_options_registry_list:
+  # フォルダオプションの"ポイントしたときにのみアイコンタイトルに下線を付ける"のチェックを入れる
+  - { path: 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer',              name: IconUnderline,                type: dword, data: 2 }
+  # フォルダオプションの"自動的に現在のフォルダーまで展開する"のチェックを入れる
+  - { path: 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced',     name: NavPaneExpandToCurrentFolder, type: dword, data: 1 }
+  # フォルダオプションの"ステータスバーを表示する"のチェックを入れる
+  - { path: 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced',     name: ShowStatusBar,                type: dword, data: 1 }
+  # フォルダオプションの"タイトルバーに完全なパスを表示する"のチェックを入れる
+  - { path: 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\CabinetState', name: FullPath,                     type: dword, data: 1 }
+  # フォルダオプションの"チェックボックスを使用して項目を選択する"のチェックを入れる
+  - { path: 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced',     name: AutoCheckSelect,              type: dword, data: 1}
+  # フォルダオプションの"隠しファイル、隠しフォルダー、またはドライブを表示しない"のチェックを入れる
+  - { path: 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced',     name: Hidden,                       type: dword, data: 1 }
+  # フォルダオプションの"登録されている拡張子は表示しない"のチェックを外す
+  - { path: 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced',     name: HideFileExt,                  type: dword, data: 0 }
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:

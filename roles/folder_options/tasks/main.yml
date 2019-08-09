@@ -1,0 +1,40 @@
+- name: shell state
+  win_reg_stat:
+    path: HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
+    name: ShellState
+  register: folder_options_shell_state
+
+# ShellStateが初期状態で存在するか自信が無いので念のため存在を確認する。
+- name: shell state exists?
+  fail:
+    msg: not found a ShellState
+  when: not(folder_options_shell_state.exists)
+
+- name: shell state data
+  set_fact:
+    # (folder_options_shell_state.value[4]).__and__(223)
+    #   => folder_options_shell_state.value[4] & 0b1101_1111
+    #   => フォルダオプションの"ポイントを選択し、シングルクリックで開く"のチェックを入れる
+    folder_options_shell_state_data: >-
+      {{
+        folder_options_shell_state.value[0:4] +
+        [ (folder_options_shell_state.value[4]).__and__(223) ] +
+        folder_options_shell_state.value[5:]
+      }}
+
+- name: registry
+  win_regedit:
+    path: "{{ item.path }}"
+    name: "{{ item.name }}"
+    type: "{{ item.type }}"
+    data: "{{ item.data }}"
+  with_items:
+    - "{{ folder_options_registry_list }}"
+    - path: HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
+      name: ShellState
+      type: binary
+      data: "{{ folder_options_shell_state_data }}"
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:
