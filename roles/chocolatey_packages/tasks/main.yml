@@ -1,10 +1,10 @@
 - name: setup check
   win_stat:
     path: C:\Chocolatey\lib
-  register: chocolatey_lib
+  register: chocolatey_packages_chocolatey_lib
 
 - name: setup
-  when: not(chocolatey_lib.stat.isdir)
+  when: not(chocolatey_packages_chocolatey_lib.stat.exists and chocolatey_packages_chocolatey_lib.stat.isdir)
   block:
     - name: package provider
       win_shell: "Get-PackageProvider -Name {{ item }}"
