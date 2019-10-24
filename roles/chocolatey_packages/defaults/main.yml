@@ -9,7 +9,7 @@ chocolatey_packages_chocolatey_package_list:
 
 chocolatey_packages_install_package_list:
   # broken at win_chocolatey, why?
-  - amazon-music
+  # - amazon-music # install from Microsoft Store
   - virtualbox
 
 # Local Variables:
