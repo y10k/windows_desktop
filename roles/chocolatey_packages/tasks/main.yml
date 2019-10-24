@@ -7,7 +7,7 @@
   when: not(chocolatey_packages_chocolatey_lib.stat.exists and chocolatey_packages_chocolatey_lib.stat.isdir)
   block:
     - name: package provider
-      win_shell: "Get-PackageProvider -Name {{ item }}"
+      win_shell: "Get-PackageProvider -Name {{ item }} -ForceBootstrap"
       with_items:
         - NuGet
         - Chocolatey
