@@ -15,7 +15,7 @@
   XDMCPIndirect="False"
   Clipboard="True"
   ClipboardPrimary="True"
-  ExtraParams=""
+  ExtraParams="-xkblayout jp -xkbmodel jp106"
   Wgl="True"
   DisableAC="False"
   XDMCPTerminate="False"
