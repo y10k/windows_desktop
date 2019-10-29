@@ -85,6 +85,11 @@ win_local | SUCCESS => {
 }
 ```
 
+### 5. sshの秘密鍵の配置
+
+管理対象のMS-Windowsマシンの`Documents\ssh`フォルダーにPageant用のssh
+秘密鍵を配置する。
+
 構築作業
 --------
 
