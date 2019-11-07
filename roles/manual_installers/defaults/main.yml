@@ -10,10 +10,6 @@ manual_installers_url_list:
     url: https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe
     cksum: 0c01536269a362c9c0689f6b4a21eb5b862de3eebc6dce1244c0ef96240c10a3
     cksum_type: sha256
-  - name: 7z1900.exe
-    url: https://www.7-zip.org/a/7z1900.exe
-    cksum: 759aa04d5b03ebeee13ba01df554e8c962ca339c74f56627c8bed6984bb7ef80
-    cksum_type: sha256
   - name: KindlePreviewerInstaller.exe
     url: https://s3.amazonaws.com/kindlepreviewer3/KindlePreviewerInstaller.exe
     cksum: caeb6cf115c49c56ceac20cb54ea675c17fc37dc3ad31210f6796ff03825d7de # version 3.34.0

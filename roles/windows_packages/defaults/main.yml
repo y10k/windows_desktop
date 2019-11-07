@@ -6,6 +6,10 @@ windows_packages_package_url_list:
     url: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.73-installer.msi
     cksum: 31d001504b56e47d7e90b39a6fde6acf949e8c59d4717abac35eef0b932f89d7
     cksum_type: sha256
+  - name: 7z1900-x64.msi
+    url: https://www.7-zip.org/a/7z1900-x64.msi
+    cksum: a7803233eedb6a4b59b3024ccf9292a6fffb94507dc998aa67c5b745d197a5dc
+    cksum_type: sha256
 
 # Local Variables:
 # indent-tabs-mode: nil
