@@ -15,7 +15,8 @@ startup_shortcut_list:
     args:
 
 startup_file_list:
-  - config.xlaunch
+  - config.xlaunch              # for VcXsrv
+  - config.ahk                  # for AutoHotKey
 
 # Local Variables:
 # indent-tabs-mode: nil

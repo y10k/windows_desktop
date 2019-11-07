@@ -6,6 +6,7 @@ chocolatey_packages_chocolatey_package_list:
   - { name: winmerge }
   - { name: vcxsrv }
   - { name: mp3tag }
+  - { name: autohotkey }
 
 chocolatey_packages_install_package_list:
   # broken at win_chocolatey, why?
