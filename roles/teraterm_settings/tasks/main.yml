@@ -4,6 +4,7 @@
     path: "{{ item }}"
   with_items:
     - "{{ teraterm_settings_virtual_store_dir }}"
+    - "{{ teraterm_settings_virtual_store_dir }}\\theme"
 
 - name: initial setting file
   win_copy:
@@ -13,6 +14,7 @@
     remote_src: yes
   with_items:
     - TERATERM.INI
+    - theme\ImageFile.INI
 
 - name: TERATERM.INI
   win_lineinfile:
@@ -24,6 +26,17 @@
     backup: yes
   with_items:
     - "{{ teraterm_settings_item_list }}"
+
+- name: ImageFile.INI
+  win_lineinfile:
+    path: "{{ teraterm_settings_virtual_store_dir }}\\theme\\ImageFile.INI"
+    insertafter: "^\\[{{ item.section | regex_escape }}\\]$"
+    regexp: "^{{ item.option | regex_escape }}\\s*="
+    line: "{{ item.option }}={{ item.value }}"
+    encoding: shift_jis
+    backup: yes
+  with_items:
+    - "{{ teraterm_settings_image_list }}"
 
 # Local Variables:
 # indent-tabs-mode: nil

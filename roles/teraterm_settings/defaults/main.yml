@@ -2,9 +2,12 @@ teraterm_settings_program_files_dir: C:\Program Files (x86)\teraterm
 teraterm_settings_virtual_store_dir: C:\Users\toki\AppData\Local\VirtualStore\Program Files (x86)\teraterm
 
 teraterm_settings_item_list:
+  - { section: BG, option: BGEnable,    value: "on" }
+  - { section: BG, option: BGThemeFile, value: theme\ImageFile.INI }
+
   - { section: "Tera Term", option: MouseCursor,      value: IBEAM }
   - { section: "Tera Term", option: AlphaBlend,       value: 180 }
-  - { section: "Tera Term", option: AlphaBlendActive, value: 220 }
+  - { section: "Tera Term", option: AlphaBlendActive, value: 255 }
   - { section: "Tera Term", option: TerminalSize,     value: "150,48" }
   - { section: "Tera Term", option: VTFont,           value: "ＭＳ ゴシック,0,-17,128" }
   - { section: "Tera Term", option: MetaKey,          value: "on" }
@@ -29,6 +32,11 @@ teraterm_settings_item_list:
   - { section: Hosts, option: Host11, value: "/C=1 ;serial port" }
   - { section: Hosts, option: Host12, value: '\\.\pipe\vmware-serial-port ;Named pipe' }
   - { section: Hosts, option: Host13, value: "/R=readme.txt ;replay a file" }
+
+teraterm_settings_image_list:
+  - { section: BG, option: BGDestFile,  value: "{{ ansible_user_dir }}\\Documents\\Wallpapers\\MTB2.JPG" }
+  - { section: BG, option: BGSrc1Alpha, value: 100 }
+  - { section: BG, option: BGSrc2Alpha, value: 100 }
 
 # Local Variables:
 # indent-tabs-mode: nil
