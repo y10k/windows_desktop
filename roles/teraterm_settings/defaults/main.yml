@@ -2,6 +2,7 @@ teraterm_settings_program_files_dir: C:\Program Files (x86)\teraterm
 teraterm_settings_virtual_store_dir: C:\Users\toki\AppData\Local\VirtualStore\Program Files (x86)\teraterm
 
 teraterm_settings_item_list:
+  - { section: "Tera Term", option: MouseCursor,      value: IBEAM }
   - { section: "Tera Term", option: AlphaBlend,       value: 180 }
   - { section: "Tera Term", option: AlphaBlendActive, value: 220 }
   - { section: "Tera Term", option: TerminalSize,     value: "150,48" }
