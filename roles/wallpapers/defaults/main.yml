@@ -1,4 +1,8 @@
 wallpapers_dir: "{{ ansible_user_dir }}\\Documents\\Wallpapers"
+wallpapers_file_list:
+  - MTB.JPG
+  - MTB2.JPG
+  - SETO_INLAND_SEA.JPG
 
 # Local Variables:
 # indent-tabs-mode: nil

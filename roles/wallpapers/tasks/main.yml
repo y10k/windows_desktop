@@ -10,8 +10,7 @@
     src: "{{ item }}"
     dest: "{{ wallpapers_dir }}/{{ item }}"
   with_items:
-    - MTB.JPG
-    - SETO_INLAND_SEA.JPG
+    - "{{ wallpapers_file_list }}"
 
 # Local Variables:
 # indent-tabs-mode: nil
