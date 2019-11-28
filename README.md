@@ -138,6 +138,7 @@ MS-Windowsマシンから一旦ログオフしてからログオンし直す。
 - はてなブックマーク
 - Facebook
 - Messenger
+- Twitter
 
 ### 4. 仕上げのプレイブックの実行
 
