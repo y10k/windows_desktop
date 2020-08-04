@@ -134,6 +134,7 @@ MS-Windowsマシンから一旦ログオフしてからログオンし直す。
 
 - Adobe Reader Touch
 - Amazon Music
+- Amazon Prime Video for Windows
 - Microsoftニュース
 - はてなブックマーク
 - Facebook
