@@ -12,13 +12,13 @@
 
 - name: shell state data
   set_fact:
-    # (folder_options_shell_state.value[4]).__and__(223)
-    #   => folder_options_shell_state.value[4] & 0b1101_1111
-    #   => フォルダオプションの"ポイントを選択し、シングルクリックで開く"のチェックを入れる
+    # (folder_options_shell_state.value[4]).__or__(32)
+    #   => folder_options_shell_state.value[4] & 0b0010_0000
+    #   => フォルダオプションの"ポイントして選択し、シングルクリックで開く"のチェックを入れる
     folder_options_shell_state_data: >-
       {{
         folder_options_shell_state.value[0:4] +
-        [ (folder_options_shell_state.value[4]).__and__(223) ] +
+        [ (folder_options_shell_state.value[4]).__or__(32) ] +
         folder_options_shell_state.value[5:]
       }}
 
