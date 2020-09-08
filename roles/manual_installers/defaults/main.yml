@@ -6,10 +6,6 @@ manual_installers_url_list:
     url: https://jaist.dl.osdn.jp/ttssh2/71232/teraterm-4.103.exe
     cksum: 344034ee31a8f0199a86b62d8b8b84c8f4c48a670ef4c295d7d1208a6adcd1e5
     cksum_type: sha256
-  - name: DockerToolbox-18.09.3.exe
-    url: https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe
-    cksum: 0c01536269a362c9c0689f6b4a21eb5b862de3eebc6dce1244c0ef96240c10a3
-    cksum_type: sha256
   - name: KindlePreviewerInstaller.exe
     url: https://s3.amazonaws.com/kindlepreviewer3/KindlePreviewerInstaller.exe
     cksum: caeb6cf115c49c56ceac20cb54ea675c17fc37dc3ad31210f6796ff03825d7de # version 3.34.0
