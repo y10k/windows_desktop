@@ -2,14 +2,17 @@ startup_dir: "{{ ansible_user_dir }}\\AppData\\Roaming\\Microsoft\\Windows\\Star
 
 startup_shortcut_list:
   - name: linux_home.vhd
+    state: absent
     src: C:\Users\toki\Documents\vhd\linux_home.vhdx
     dir: C:\Users\toki\Documents\vhd
     args:
   - name: Pageant
+    state: present
     src: C:\Program Files\PuTTY\pageant.exe
     dir: C:\Program Files\PuTTY
     args: C:\Users\toki\Documents\ssh\id_ed25519.ppk
   - name: start-ssh-pageant.cmd
+    state: present
     src: C:\Program Files\Git\cmd\start-ssh-pageant.cmd
     dir: C:\Program Files\Git\cmd
     args:

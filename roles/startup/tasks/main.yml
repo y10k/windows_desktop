@@ -1,4 +1,11 @@
-- name: shortcuts
+- name: absent shortcuts
+  win_file:
+    path: "{{ startup_dir }}\\{{ item.name }}.lnk"
+    state: absent
+  with_items:
+    - "{{ startup_shortcut_list | selectattr('state', 'eq', 'absent') | list }}"
+
+- name: present shortcuts
   win_shortcut:
     src: "{{ item.src }}"
     dest: "{{ startup_dir }}\\{{ item.name }}.lnk"
@@ -7,7 +14,7 @@
     state: present
     windowstyle: minimized
   with_items:
-    - "{{ startup_shortcut_list }}"
+    - "{{ startup_shortcut_list | selectattr('state', 'eq', 'present') | list }}"
 
 - name: files
   win_copy:
